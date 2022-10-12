@@ -24,11 +24,15 @@ function App() {
           path: '/statics',
           element: <Statics></Statics>
         },
+        {
+          path: "*",
+          element: <p>Not Found</p>
+        }
       ]
     }
   ])
   return (
-    <div className="App">
+    <div >
       <RouterProvider router={router}></RouterProvider>
 
       {/* <header className="App-header">
