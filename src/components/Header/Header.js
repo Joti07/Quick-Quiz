@@ -6,6 +6,7 @@ const Header = () => {
     return (
         <div>
             <nav className='header'>
+                <div className='text'>Quick Quiz</div>
                 <Link to='/' >Home</Link>
                 <Link to='/statics' >Statics</Link>
                 <Link to='/blog' >Blog</Link>

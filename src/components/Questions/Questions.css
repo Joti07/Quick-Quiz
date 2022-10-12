@@ -1,0 +1,8 @@
+.option {
+    display: flex;
+
+}
+
+.container {
+    display: grid;
+}

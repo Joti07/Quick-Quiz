@@ -1,5 +1,6 @@
 import React from 'react';
 import Topic from '../Topic/Topic';
+import './Quizes.css';
 
 const Quizes = ({ alltopics }) => {
 
