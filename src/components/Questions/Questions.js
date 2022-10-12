@@ -1,10 +1,11 @@
-import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import { Alert } from 'react-bootstrap';
 import './Questions.css';
 
 const Questions = ({ quesData }) => {
-    console.log(quesData);
+    //console.log(quesData);
     const [isActive, setIsActive] = useState(true);
     const handleAnsView = event => {
         setIsActive(current => !current);
@@ -14,7 +15,8 @@ const Questions = ({ quesData }) => {
             <div class="container mt-sm-5 my-1">
                 <div class="question ml-sm-5 pl-sm-5 pt-2">
                     <h5 class="py-2 h5"><b>Q. {quesData.question.slice(3, -4)}</b>
-                        <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+                        <FontAwesomeIcon onClick={handleAnsView} className={isActive ? '' : `hidden`} icon={faEye} />
+                        <FontAwesomeIcon onClick={handleAnsView} className={isActive ? `hidden` : ''} icon={faEyeSlash} />
                     </h5>
                     <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
                         {
@@ -30,6 +32,17 @@ const Questions = ({ quesData }) => {
                         }
 
 
+                    </div>
+                    <div className={isActive ? 'hidden' : ''}>
+                        <Alert
+                            onDismiss={function onDismiss() { handleAnsView() }}>
+                            <span>
+                                <span >
+                                    Correct Answer :
+                                </span>
+                                {' '}{quesData.correctAnswer}
+                            </span>
+                        </Alert>
                     </div>
                 </div>
             </div>

@@ -3,6 +3,10 @@
 
 }
 
+.hidden {
+    display: none;
+}
+
 .container {
     display: grid;
 }
