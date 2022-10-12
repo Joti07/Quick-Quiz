@@ -1,6 +1,6 @@
 .header {
     height: 80px;
-    background-color: #1C2B35;
+    background-color: #91bedc;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,11 +16,11 @@
 }
 
 .header a:hover {
-    color: rgb(158, 158, 218);
+    color: rgb(17, 17, 86);
 }
 
 .text {
-    color: rgb(158, 158, 218);
+    color: rgb(17, 17, 86);
     font-weight: bold;
     font-size: 30px;
 }

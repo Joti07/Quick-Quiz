@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Banner from '../Banner/Banner';
 import Quizes from '../Quizes/Quizes';
 
 import './Home.css';
@@ -10,6 +11,7 @@ const Home = () => {
     return (
 
         <div>
+            <Banner></Banner>
             <Quizes alltopics={alltopics}></Quizes>
 
         </div>
