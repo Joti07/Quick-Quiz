@@ -1,7 +1,8 @@
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-import { Alert, ToastContainer } from 'react-bootstrap';
+import { ToastContainer } from 'react-toastify';
+import { Alert } from 'react-bootstrap';
 import './Questions.css';
 
 const Questions = ({ quesData, handleAns }) => {

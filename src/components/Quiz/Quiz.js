@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Questions from '../Questions/Questions';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 import './Quiz.css';
 const Quiz = () => {
     const quizData = useLoaderData();
@@ -18,16 +18,19 @@ const Quiz = () => {
         theme: "colored",
     });
 
-    const wrong = () => toast.error('Your answer is Wrong', {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-    });
+    const wrong = () => {
+        console.log('here')
+        toast.error('Your answer is Wrong', {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        });
+    }
 
     const handleAns = (option, correctAns) => {
         if (option === correctAns) {
