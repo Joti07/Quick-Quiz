@@ -1,11 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Questions from '../Questions/Questions';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Quiz.css';
 const Quiz = () => {
     const quizData = useLoaderData();
+
+    const right = () => toast.success('Your answer is Correct!!', {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+    });
+
+    const wrong = () => toast.error('Your answer is Wrong', {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+    });
+
+    const handleAns = (option, correctAns) => {
+        if (option === correctAns) {
+            console.log(option);
+            right()
+
+        }
+        else {
+            wrong()
+        }
+
+    }
     const quesData = quizData.data.questions;
-    console.log(quizData.data.questions);
+    // console.log(quizData.data.questions);
 
 
     return (
@@ -16,6 +52,7 @@ const Quiz = () => {
                         <Questions
                             key={quesData.id}
                             quesData={quiz}
+                            handleAns={handleAns}
                         ></Questions>
                     )
                 }

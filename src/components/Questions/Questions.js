@@ -1,10 +1,10 @@
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
-import { Alert } from 'react-bootstrap';
+import { Alert, ToastContainer } from 'react-bootstrap';
 import './Questions.css';
 
-const Questions = ({ quesData }) => {
+const Questions = ({ quesData, handleAns }) => {
     //console.log(quesData);
     const [isActive, setIsActive] = useState(true);
     const handleAnsView = event => {
@@ -23,8 +23,9 @@ const Questions = ({ quesData }) => {
 
                             quesData.options.map(option =>
                                 <label class="options" className='option'>
-                                    <input type="radio" name="radio" />{option}
+                                    <input onClick={() => handleAns(option, quesData.correctAnswer)} type="radio" name="radio" />{option}
                                     <span class="checkmark"></span>
+                                    <ToastContainer />
                                 </label>
 
                             )
