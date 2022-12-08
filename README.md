@@ -1,5 +1,6 @@
+#Live Link of WebSite : https://quick-quiz-11.netlify.app/
 
-Project Name : Quick Quiz
+##Quick Quiz
 
  Features: 
  1. Quizzes on 4 different topics
@@ -10,8 +11,8 @@ Project Name : Quick Quiz
  
  This web project is built on the React class of components. This is a quiz application website. In this Quiz-Quick Website, users can respond to the quiz questions where multiple options are given. If users choose any option, they get notify whether the option right or wrong by a toast. 
 
-Live Link of WebSite : https://quick-quiz-11.netlify.app/
 
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+
 
