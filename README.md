@@ -1,4 +1,4 @@
-## Live Link of WebSite : https://quick-quiz-11.netlify.app/
+##   [Live Link]([https://www.google.com](https://quick-quiz-11.netlify.app/)) of WebSite 
 
 # Quick Quiz
 
